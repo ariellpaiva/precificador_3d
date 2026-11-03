@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+<!-- Precificador 3D · by ariellpaiva · https://github.com/ariellpaiva -->
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="author" content="ariellpaiva">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Precificador 3D</title>
 <link rel="icon" id="favicon" href="data:,">
@@ -1607,6 +1609,14 @@ applyCfg(local.get(K.c));
 pecas=local.get(K.p)||[];fils=local.get(K.f)||[];projs=local.get(K.j)||[];aces=local.get(K.a)||[];vendas=local.get(K.v)||[];
 rows=[newRow("",0)];renderAll();fKgUpd();
 
+// easter egg: 5 cliques rápidos na logo revelam a autoria
+(()=>{
+  console.log("%cPrecificador 3D · by ariellpaiva","font:700 14px system-ui;color:#2F5D8C");
+  let n=0,t;const h=document.querySelector(".brand h1");
+  const hit=()=>{clearTimeout(t);t=setTimeout(()=>n=0,800);if(++n<5)return;n=0;
+    const o=h.textContent;h.textContent="by ariellpaiva ✨";setTimeout(()=>h.textContent=o,2500);};
+  $("brandLogo").addEventListener("click",hit);$("brandMono").addEventListener("click",hit);
+})();
 (async()=>{
   try{db=window.claude?.use?await window.claude.use("db"):null}catch(e){db=null}
   try{assets=window.claude?.use?await window.claude.use("assets"):null}catch(e){assets=null}

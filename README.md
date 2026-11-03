@@ -1,5 +1,7 @@
 # Precificador 3D
 
+> by [ariellpaiva](https://github.com/ariellpaiva)
+
 ## Descrição
 
 Sistema para **precificar impressões 3D**. Ele calcula o preço sugerido de cada peça a partir do tempo de impressão,
@@ -198,3 +200,7 @@ precificador_3d/
 | `precificador.local` não abre | Use o endereço com o IP mostrado no terminal. |
 | Erro ao iniciar o `iniciar-rede.bat` | A porta 80 pode estar ocupada. Use outra porta (veja [Opções de inicialização](#opções-de-inicialização)). |
 | Fontes diferentes do esperado | As fontes dos temas vêm da internet. Sem conexão, o sistema funciona normalmente com as fontes padrão. |
+
+---
+
+Feito por **[ariellpaiva](https://github.com/ariellpaiva)**.
